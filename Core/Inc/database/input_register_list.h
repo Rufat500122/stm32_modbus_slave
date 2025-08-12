@@ -1,0 +1,52 @@
+/*
+ * holding_register_list.h
+ *
+ *  Created on: Aug 12, 2025
+ *      Author: SUser
+ */
+
+#ifndef __DATABASE_INPUT_REGISTER_LIST_H__
+#define __DATABASE_INPUT_REGISTER_LIST_H__
+#include "functional_support_config.h"
+
+typedef enum {
+#if SENSOR_NTC_COUNTER > 0
+	SENSOR_TEMPERATURE_NTC_1,
+#endif
+#if SENSOR_NTC_COUNTER > 1
+	SENSOR_TEMPERATURE_NTC_2,
+#endif
+#if SENSOR_NTC_COUNTER > 2
+	SENSOR_TEMPERATURE_NTC_3,
+#endif
+#if SENSOR_NTC_COUNTER > 3
+	SENSOR_TEMPERATURE_NTC_4,
+#endif
+#if SENSOR_4_20_COUNTER > 0
+	SENSOR_4_20_1,
+#endif
+#if SENSOR_4_20_COUNTER > 1
+	SENSOR_4_20_2,
+#endif
+#if SENSOR_4_20_COUNTER > 2
+	SENSOR_4_20_3,
+#endif
+#if SENSOR_4_20_COUNTER > 3
+	SENSOR_4_20_4,
+#endif
+#if SENSOR_HUMIDITY_COUNTER > 0
+	SENSOR_HUMIDITY_1,
+#endif
+#if SENSOR_HUMIDITY_COUNTER > 1
+	SENSOR_HUMIDITY_2,
+#endif
+#if SENSOR_HUMIDITY_COUNTER > 2
+	SENSOR_HUMIDITY_3,
+#endif
+#if SENSOR_HUMIDITY_COUNTER > 3
+	SENSOR_HUMIDITY_4,
+#endif
+	INPUT_REGISTER_COUNTER,
+} input_register_list_t;
+
+#endif /* __DATABASE_INPUT_REGISTER_LIST_H__ */
